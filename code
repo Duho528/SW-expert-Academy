@@ -1,0 +1,6 @@
+a = list(input())
+num=0
+for i in a:
+    num+=int(i)
+
+print(num)
