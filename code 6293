@@ -1,0 +1,21 @@
+# 다음의 결과와 같이 사용자로부터 콤마(,)로 구분해 여러 원의 반지름을 입력 받아
+ 
+# 이들에 대한 원의 둘레를 계산해 출력하는 프로그램을 작성하십시오.
+
+from math import pi
+# map을 이용하여 정수형 인자를 받는다.
+radius_list = list(map(int,input().split(',')))
+lst = map(lambda x: round(pi*2*x,2),radius_list)
+# join을 사용하기 위해 다시 문자열로 바꾸어 맵핑
+lst = map(str, lst)
+
+print(', '.join(lst))
+
+----------------------------------------------------------------------------------------
+from math import pi
+
+a = [2*pi*int(i) for i in input().split(',')]
+for j in a[:-1]:
+    print("{:0.2f}".format(j), end=', ')
+# 이렇게 코드를 작성하면 마지막에 ,가 붙으므로 마지막 계산값은 따로 print 해준다.
+print("{:0.2f}".format(a[-1]))
